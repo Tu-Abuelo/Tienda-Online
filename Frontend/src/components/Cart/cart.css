@@ -1,0 +1,112 @@
+.cart-check{
+   position: fixed;
+   right: 0;
+   top: 0; 
+   z-index: 10;
+}
+.cart-container{
+    position: fixed;
+    right: 0;
+    top: 0; 
+    z-index: 1;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: #3d3535;
+}
+.cart{
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    min-height: 300px;
+    max-height: 80vh;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+.cart::-webkit-scrollbar{
+    width: 0px;
+}
+
+
+.cart-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+.cart-product > strong > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+}
+
+.cart-img{
+    width: 120px;
+    height: 120px;
+}
+
+.cart-button{
+    background-color: #ff2929;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 2px;
+
+}
+
+.cart-button:hover{
+    background-color:  #da2d2d;
+  }
+
+.cart-button> .icon-tabler-shopping-cart{
+    width: 100%;
+    height: 100%;
+}
+
+
+.cart-buton >img{
+    width: 100%;
+    height: 100%;
+    color: #000000;
+}
+
+.cart_buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 2px;
+}
+
+.cart_button-buy, .cart_button-remove {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 2px;
+    line-height: 25px;
+    height: 25px;
+    text-align: center;
+    font-weight: 500;
+    color: #000000;
+    background-color: var(--color-background-buttons);
+    border: 3px solid;
+    border: 0;
+    outline: 1px solid #000;
+    border-radius: 3px;
+
+}
+
+
+.cart_button-buy:hover, .cart_button-remove:hover{
+    background-color:  var(--color-background-buttons-hover);
+}

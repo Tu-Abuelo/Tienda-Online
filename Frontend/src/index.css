@@ -1,0 +1,15 @@
+body{
+    overflow-y: scroll ;
+    background-color: #dff9fd ;
+}
+
+:root{
+    --color-background-product:rgb(141, 186, 207);
+    --color-background-buttons: #06acee;
+    --color-background-buttons-hover: #0392ca;
+}
+
+#root{
+    max-width: 1600px;
+    margin: auto;
+}

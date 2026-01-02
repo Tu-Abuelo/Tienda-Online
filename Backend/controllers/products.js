@@ -10,4 +10,15 @@ export class ProductControllers {
 
     res.json(products)
   }
+<<<<<<< HEAD
+=======
+
+  createProuct = async (req, res) => {
+    const result = req.body
+
+    const newProduct = await this.productModule.createProduct({ input: result })
+
+    res.status(200).json(newProduct)
+  }
+>>>>>>> 2eb196bf955bf4de9144c7b119cc28a9ac473df7
 }

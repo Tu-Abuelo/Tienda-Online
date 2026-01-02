@@ -55,7 +55,7 @@ export default function Details () {
 
           <footer className='similarProducts-container'>
             <h1>Similar Products</h1>
-            <main>
+            <main className='similarProducts-container-main'>
               <SimilarProducts products={similarProduct} />
             </main>
           </footer>

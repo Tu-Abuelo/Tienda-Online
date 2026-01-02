@@ -10,7 +10,7 @@ export default function SimilarProducts ({ products }) {
         key={product.id}
                                >
         <Link to={`/detail/${product.id}/${product.category}`} className='similarProducts-img-container'>
-          <img className='similarProducts-img' src={product.image} />
+          <img className='similarProducts-img' src={product.image} alt={product.title}/>
         </Link>
         <p className='similarProducts-price'><strong>Price:{product.price}$</strong></p>
                                </section>)}

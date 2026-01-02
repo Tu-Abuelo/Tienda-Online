@@ -1,5 +1,5 @@
 export default function getCategorys () {
-  const API_URL = 'https://fakestoreapi.com/products/categories'
+  const API_URL = 'http://localhost:1234/categorys'
   return fetch(API_URL)
     .then(res => res.json())
     .then(res => {

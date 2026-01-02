@@ -1,6 +1,10 @@
 body{
-    overflow-y: scroll ;
+    overflow-y: auto ;
     background-color: #dff9fd ;
+
+}
+body::-webkit-scrollbar{
+    width: 0.0001px;
 }
 
 :root{

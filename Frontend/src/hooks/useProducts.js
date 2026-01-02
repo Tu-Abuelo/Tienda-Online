@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import getProducts from '../services/getProducts'
 import { ProductsContext } from '../contexts/products'
 import useFilters from './useFilters'
@@ -8,11 +8,11 @@ export default function useProducts () {
   const { filtersProducts } = useFilters()
 
   useEffect(() => {
-    getProducts().then(res => {
+    getProducts(limit).then(res => {
       setProducts(res)
     })
-  }, [])
+  }, [limit])
 
-  const filterProducts = filtersProducts(products.slice(0, limit))
+  const filterProducts = filtersProducts(products)
   return { products, filterProducts, limit, setLimit }
 }

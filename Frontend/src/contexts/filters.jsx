@@ -4,10 +4,9 @@ export const FiltersContext = createContext()
 
 export default function FiltersProvider ({ children }) {
   const [filters, setFilters] = useState({
-    category : "all",
-    maxPrice : 1500
+    category: 'all',
+    maxPrice: 1500
   })
-
 
   return (
     <FiltersContext.Provider value={{ filters, setFilters }}>

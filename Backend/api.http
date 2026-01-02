@@ -1,0 +1,6 @@
+### Obtener los productos de la API
+GET http://localhost:1234/products
+
+###Obtenr una cantidad especifica de productos de la API
+GET http://localhost:1234/products?limit=10
+

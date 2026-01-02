@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react'
-import getCategorys from '../services/getCategorys'
+import getCategorysLocal from '../services/getCategorysLocal'
+import getCategorysOnline from '../services/getCategorysOnline'
 
 export default function useCategorys () {
   const [categorys, setCategorys] = useState()
 
   useEffect(() => {
-    getCategorys().then(res => setCategorys(res))
+    // You can switch between online and local data fetching here switching
+    // getCategorysOnline or getCategorysLocal
+    getCategorysOnline().then(res => setCategorys(res))
   }, [])
 
   return categorys

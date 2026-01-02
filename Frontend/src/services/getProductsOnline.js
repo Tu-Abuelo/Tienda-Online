@@ -1,6 +1,7 @@
-export default function getProducts (limit = 20) {
-  const API_URL = `https://fakestoreapi.com/products?limit=${limit}`
-  return fetch(API_URL)
+export default function getProductsOnline (limit = 20) {
+  const API_URL_ONLINE = 'https://fakestoreapi.com/products'
+
+  return fetch(API_URL_ONLINE)
     .then(res => res.json())
     .then(res => {
       const products = res.map(product => {
@@ -8,7 +9,6 @@ export default function getProducts (limit = 20) {
         const quantity = 1
         return { id, description, title, price, image, category, quantity }
       })
-
-      return products
+      return products.slice(0, limit)
     })
 }

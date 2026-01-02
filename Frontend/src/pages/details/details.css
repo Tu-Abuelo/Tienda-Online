@@ -1,51 +1,81 @@
 .productsDetail-container{
+    --card-bg: var(--color-background-product, #ffffff);
+    --muted: #6b7280;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width:95% ;
+    width: 95%;
     max-width: 1200px;
-    min-width: 15px;
-    padding: 5px;
+    padding: 14px;
     background-color: var(--color-background-product);
-    margin: auto;
-    margin-top: 5px;
-    outline: 1px solid #000;
+    margin: 18px auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(2,6,23,0.06);
 }
 
 .similarProducts-container{
     max-width: 1200px;
     width: 95%;
-    padding: 5px;
+    padding: 14px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:var(--color-background-product) ;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    outline: 1px solid #000;
-
+    background-color: var(--color-background-product);
+    margin: 18px auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(2,6,23,0.04);
 }
 
 .similarProducts-container > main{
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 10px;
-    height: 300px;
-    width: 95%;
+    gap: 14px;
+    width: 100%;
+    /* allow content-driven height but cap it; remove fixed percentages that may force vertical scroll */
+    height: auto;
+    max-height: 60vh;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: hidden; /* force horizontal scrolling only */
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    padding-bottom: 6px;
 }
 
+/* hide scrollbar but keep accessibility */
+.similarProducts-container > main::-webkit-scrollbar{
+    height: 10px;
+    
+}
+.similarProducts-container > main::-webkit-scrollbar-thumb{
+    background: rgba(2,6,23,0.08);
+    border-radius: 999px;
+}
+
+@media screen and (max-width:900px){
+    .productsDetail-container{
+        padding: 14px;
+        margin: 14px auto;
+    }
+    .similarProducts-container > main{
+        height: 260px;
+    }
+}
 
 @media screen and (max-width:500px) {
     .productsDetail-container{
-        width:90% ;
+        width:95%;
         margin-top: 10px;
-        padding: 10px;
+        padding: 12px;
     }
-
+    .similarProducts-container{
+        padding: 10px;
+        margin: 12px auto;
+    }
+    .similarProducts-container > main{
+        gap: 10px;
+    }
 }

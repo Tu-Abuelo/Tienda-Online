@@ -1,5 +1,6 @@
-import { useContext, useEffect, useState } from 'react'
-import getProducts from '../services/getProducts'
+import { useContext, useEffect } from 'react'
+import getProductsLocal from '../services/getProductsLocal'
+import getProductsOnline from '../services/getProductsOnline'
 import { ProductsContext } from '../contexts/products'
 import useFilters from './useFilters'
 
@@ -8,11 +9,13 @@ export default function useProducts () {
   const { filtersProducts } = useFilters()
 
   useEffect(() => {
-    getProducts().then(res => {
+    // You can switch between online and local data fetching here switching
+    // getProductsOnline or getProductsLocal
+    getProductsOnline(limit).then(res => {
       setProducts(res)
     })
-  }, [])
+  }, [limit])
 
-  const filterProducts = filtersProducts(products.slice(0, limit))
+  const filterProducts = filtersProducts(products)
   return { products, filterProducts, limit, setLimit }
 }

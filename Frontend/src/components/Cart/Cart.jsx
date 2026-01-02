@@ -13,7 +13,8 @@ export default function Cart () {
 
   return (
     <>
-      <input type='checkbox' onChange={handleChange} className='cart-check' />
+      <label className='cart-check' htmlFor='cart-check'> <CartIcon /></label>
+      <input id='cart-check' type='checkbox' onChange={handleChange} hidden />
       {visibility
         ? <aside className='cart-container'>
           <ul className='cart'>

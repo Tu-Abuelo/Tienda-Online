@@ -1,5 +1,5 @@
 {
-  "name": "Tienda",
+  "name": "tienda",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,8 +13,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.14.0",
-    "standard": "^17.1.0",
-    "zod": "^3.23.8"
+    "standard": "^17.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

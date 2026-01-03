@@ -34,12 +34,12 @@ export default function Details () {
       {
       productDetail.length == 0
         ? <main className='productsDetail-container'>
-          <Link className='home' to='/'>🔙 Return to Home</Link>
+          <Link className='home' to='/Tienda-Online/'>🔙 Return to Home</Link>
           <h3>Not product select</h3>
           </main>
         : <>
           <main className='productsDetail-container'>
-            <Link className='home' to='/'>🔙 Return to Home</Link>
+            <Link className='home' to='/Tienda-Online/'>🔙 Return to Home</Link>
             <ProductDetail
               description={productDetail[0].description}
               title={productDetail[0].title}

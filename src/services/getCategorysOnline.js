@@ -9,7 +9,6 @@ export default function getCategorysOnline () {
         return category
       })
 
-      console.log('Fetched categorys online:', categorys)
       const newCategorys = [...new Set(categorys)]
       return newCategorys
     })

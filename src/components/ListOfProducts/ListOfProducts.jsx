@@ -43,7 +43,7 @@ export default function ListOfProducts ({ products }) {
            ? ''
            : limit <= products.length
              ? <button onClick={() => { setLimit(page => page + 6) }} className='products-lazyLoud'>More Products</button>
-             : <h3 className='no-products'>No hay mas productos {/* <Link className='products-create_product' to='/CreateProduct'>Deseas crearlo?</Link> */}</h3>
+             : <h3 className='no-products'>No hay mas productos </h3>
 }
       </div>
     </>
